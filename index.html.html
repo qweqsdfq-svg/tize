@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>تعز · مدينة تحت الحصار</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300..900&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0A1214;--bg2:#111E21;--ink:#EFE8D8;--mut:#9FB0AE;--gold:#D9A441;--mint:#4FD1B5;--red:#F0524F;--line:#223639;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1214}}
+:root[data-theme="dark"]{--bg:#0A1214}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font-family:Cairo,Tahoma,sans-serif;line-height:1.6;overflow-x:hidden}
+.s{min-height:100vh;padding:clamp(28px,6vw,96px);display:flex;flex-direction:column;justify-content:center;gap:32px;border-bottom:1px solid var(--line)}
+.k{color:var(--gold);font-weight:700;letter-spacing:.04em;font-size:clamp(15px,1.6vw,20px)}
+h2{font-size:clamp(34px,5.4vw,72px);font-weight:900;line-height:1.2}
+p.l{color:var(--mut);font-size:clamp(17px,1.8vw,24px);max-width:60ch}
+.r{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.r.in{opacity:1;transform:none}
+#hero{position:relative;overflow:hidden;align-items:flex-start}
+#hero svg{position:absolute;left:-10%;top:50%;width:min(90vh,80vw);transform:translateY(-50%)}
+.ring{fill:none;stroke:var(--red);transform-box:fill-box;transform-origin:center;animation:t 4s cubic-bezier(.2,.7,.2,1) forwards}
+.ring:nth-child(2){animation-delay:.3s;opacity:.5}.ring:nth-child(3){animation-delay:.6s;opacity:.25}
+@keyframes t{from{transform:scale(1.7);stroke-dasharray:30 40}to{transform:scale(1);stroke-dasharray:none}}
+h1{font-size:clamp(120px,26vw,380px);font-weight:900;line-height:1;position:relative}
+.sub{font-size:clamp(24px,4vw,56px);font-weight:700;color:var(--red);position:relative}
+.nm{color:var(--mut);position:relative;font-size:clamp(15px,1.7vw,22px)}
+.map{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:24px}
+@media(max-width:860px){.map{grid-template-columns:1fr}}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:24px}
+svg text{font-family:Cairo,sans-serif;fill:var(--mut);font-size:15px}
+.hs{fill:var(--gold);cursor:pointer}.hp{fill:none;stroke:var(--gold);transform-box:fill-box;transform-origin:center;animation:p 2s infinite}
+@keyframes p{from{transform:scale(1);opacity:1}to{transform:scale(3);opacity:0}}
+.b{background:none;border:1px solid var(--line);color:var(--ink);font:inherit;padding:8px 18px;border-radius:99px;cursor:pointer}
+.b.on{background:var(--gold);color:#1A1405;border-color:var(--gold);font-weight:700}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+#pt{font-size:28px;font-weight:800;color:var(--gold);margin-bottom:8px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.n{font-size:clamp(44px,6vw,84px);font-weight:900;line-height:1.1;color:var(--mint);direction:ltr;text-align:right}
+.n.rd{color:var(--red)}
+.cmp{display:flex;align-items:flex-end;gap:24px}
+.big{width:240px;height:240px;border:2px solid var(--line);position:relative}
+.sm{position:absolute;right:0;bottom:0;width:13px;height:13px;background:var(--red)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+.tabs{display:grid;gap:20px;grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
+@media(max-width:860px){.tabs{grid-template-columns:1fr}}
+#tt{font-size:clamp(28px,3.6vw,48px);font-weight:900;color:var(--mint)}
+.rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.rec .card b{display:block;color:var(--red);font-size:44px;font-weight:900}
+.src{color:var(--mut);font-size:14px}
+.dots{position:fixed;left:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:5}
+.dots a{width:10px;height:10px;border-radius:50%;background:var(--line)}.dots a.on{background:var(--gold)}
+@media(max-width:700px){.dots{display:none}}
+html{scroll-padding-top:64px}.s{padding-top:calc(clamp(28px,6vw,96px) + 56px)}
+header#top{position:fixed;top:0;left:0;right:0;z-index:9;display:flex;gap:10px;align-items:center;padding:calc(8px + env(safe-area-inset-top,0px)) 16px 8px;background:#0A1214EE;border-bottom:1px solid var(--line)}
+#pg{position:absolute;bottom:-1px;right:0;height:3px;width:0;background:var(--gold)}
+#nv{display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none}
+#nv a{white-space:nowrap;padding:6px 14px;border-radius:99px;color:var(--mut);font-size:15px;text-decoration:none}
+#nv a.on{background:var(--gold);color:#1A1405;font-weight:700}
+html.pm{scroll-snap-type:y mandatory}html.pm .s{scroll-snap-align:start}
+.hint{position:relative;color:var(--gold);font-size:16px;margin-top:8px}
+.iv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);gap:20px}@media(max-width:860px){.iv{grid-template-columns:1fr}}
+.ppl{display:flex;flex-direction:column;gap:10px}
+.pc{text-align:right;background:var(--bg2);border:1px solid var(--line);color:var(--ink);font:inherit;font-weight:700;padding:14px 18px;border-radius:16px;cursor:pointer}
+.pc.on{border-color:var(--gold)}.pc small{display:block;color:var(--mut);font-size:14px;font-weight:400}
+#ans{display:flex;flex-direction:column;gap:10px;margin-top:16px;min-height:150px}
+.bq{align-self:flex-start;background:#1A2D30;border-radius:16px;padding:10px 16px}
+.ba{align-self:flex-end;background:#12403A;border:1px solid var(--mint);border-radius:16px;padding:10px 16px;max-width:94%}
+.ba small{display:block;color:var(--mut);font-size:13px}
+.warn{color:var(--gold);border:1px dashed var(--gold);border-radius:12px;padding:10px 16px;font-size:16px}
+</style>
+</head>
+<body>
+<header id="top"><div id="pg"></div><nav id="nv"></nav><button class="b" id="pm">وضع العرض</button></header>
+<nav class="dots" id="dots"></nav>
+
+<section class="s" id="hero">
+<svg viewBox="0 0 400 400" aria-hidden="true"><circle class="ring" cx="200" cy="200" r="190" stroke-width="3"/><circle class="ring" cx="200" cy="200" r="150" stroke-width="2"/><circle class="ring" cx="200" cy="200" r="110" stroke-width="2"/></svg>
+<div class="k" style="position:relative">البرنامج المتكامل للتدريب · الطب البشري</div>
+<h1>تعز</h1>
+<div class="sub">مدينة تحت الحصار منذ 2015</div>
+<div class="nm">زين العابدين · حمود · محمد غسان · عمار · عبدالله</div>
+<div class="hint">للتنقل: القائمة بالأعلى، أو الأسهم والمسطرة بلوحة المفاتيح</div>
+</section>
+
+<section class="s">
+<div class="k r">١ · الاسم والجغرافيا</div>
+<h2 class="r">مدينة صغيرة المساحة، محاصَرة من كل جهة</h2>
+<div class="map r">
+<div class="card">
+<div class="row" style="margin-bottom:12px"><button class="b on" data-m="1">حصار 2015</button><button class="b" data-m="2">أكتوبر 2026: تطويق كامل</button></div>
+<svg viewBox="0 0 800 540" id="mp" role="img" aria-label="خريطة تخطيطية لتعز">
+<g fill="none" stroke="#223639"><ellipse cx="430" cy="410" rx="70" ry="45"/><ellipse cx="430" cy="410" rx="130" ry="85"/><ellipse cx="430" cy="410" rx="200" ry="125"/><ellipse cx="430" cy="410" rx="280" ry="160"/></g>
+<path d="M430 385l26 40h-52z" fill="#223639"/><text x="430" y="445" text-anchor="middle">جبل صبر</text>
+<g fill="none" stroke-width="3"><path id="rn" d="M400 172C410 110 440 60 470 20" stroke="#4FD1B5"/><path id="ra" d="M470 320C560 380 650 420 760 455" stroke="#4FD1B5"/><path d="M290 260C200 280 120 330 30 350" stroke="#4FD1B5" opacity=".5"/></g>
+<text x="480" y="30">صنعاء</text><text x="735" y="480">عدن</text><text x="30" y="375">المخا</text>
+<ellipse cx="400" cy="250" rx="120" ry="78" fill="#4FD1B5" fill-opacity=".16" stroke="#4FD1B5"/>
+<text x="400" y="255" text-anchor="middle" style="fill:#EFE8D8;font-weight:800;font-size:22px">تعز</text>
+<ellipse id="rg" cx="400" cy="250" rx="195" ry="140" fill="none" stroke="#F0524F" stroke-width="4" stroke-dasharray="26 22"/>
+<g id="xx" opacity="0" stroke="#F0524F" stroke-width="6"><path d="M600 395l28 28M628 395l-28 28"/></g>
+<g id="hsg"></g>
+</svg>
+</div>
+<div class="card" id="pn"><div id="pt">اضغط على نقطة</div><p class="l" id="pb" style="font-size:19px">اختر أي نقطة ذهبية على الخريطة لتعرف دورها في أزمة المدينة. الرسم تخطيطي وليس بمقياس دقيق.</p>
+<div class="cmp" style="margin-top:24px"><div class="big"><div class="sm"></div></div><p class="src" style="max-width:20ch">المربع الأحمر: المدينة (نحو 38 كم²) مقابل المحافظة (12,605 كم²)، أي ما يقارب 0.3%</p></div></div>
+</div>
+<div class="src r">المصادر: Wikipedia، دراسة جغرافية عن مياه مدينة تعز، Human Rights Watch</div>
+</section>
+
+<section class="s">
+<div class="k r">تعز بالأرقام</div>
+<h2 class="r">كثافة عالية في مساحة ضيقة</h2>
+<div class="g r">
+<div class="card"><div class="n" data-n="38">0</div><div>كم² مساحة المدينة تقريباً</div></div>
+<div class="card"><div class="n" data-n="940600">0</div><div>نسمة تقديرياً (2023)</div></div>
+<div class="card"><div class="n" data-n="22" data-s="K+">0</div><div>نسمة لكل كم²</div></div>
+<div class="card"><div class="n rd" data-n="42">0</div><div>منشأة صحية تعاني نقصاً حاداً (WHO)</div></div>
+<div class="card"><div class="n rd" data-n="11">0</div><div>سنة من الحصار</div></div>
+</div>
+<div class="src r">المصادر: Wikipedia، منظمة الصحة العالمية، AFP</div>
+</section>
+
+<section class="s">
+<div class="k r">٥ · الملف الصحي</div>
+<h2 class="r">الخدمات الصحية وأثر الحصار</h2>
+<div class="warn r">قبل الحرب كان في تعز 20 مستشفى لنحو 600 ألف نسمة، ثم بقيت ستة فقط تعمل جزئياً (MSF، 2016). تقديرات قديمة، والوضع الحالي قد يختلف.</div>
+<div class="g r"><div class="card"><h3 style="color:var(--gold)">مستشفى الثورة</h3>أكبر مستشفى عام في المدينة</div><div class="card"><h3 style="color:var(--gold)">المستشفى الجمهوري</h3>خدمات الأمومة</div><div class="card"><h3 style="color:var(--gold)">اليمني السويدي</h3>طب الأطفال</div><div class="card"><h3 style="color:var(--gold)">مستشفى الروضة</h3>طوارئ الجرحى</div></div>
+<div class="src r">المصادر: MSF، ICRC، WHO</div>
+<div class="tabs r"><div class="row" id="tb" style="flex-direction:column;align-items:stretch"></div>
+<div class="card"><div id="tt"></div><p class="l" id="tx" style="margin-top:10px"></p></div></div>
+<div class="src r">المصادر: WHO، HRW، ICRC، الأمم المتحدة (أكتوبر 2026)</div>
+</section>
+
+<section class="s">
+<div class="k r">أصوات السكان</div>
+<h2 class="r">مقابلات افتراضية</h2>
+<div class="warn r">سيناريوهات توضيحية أعدّها الفريق، وكل إجابة مبنية على تقرير أو شهادة منشورة مذكور مصدرها. ليست مقابلات ميدانية حقيقية.</div>
+<div class="iv r"><div class="ppl" id="pp"></div><div class="card"><div id="who" style="font-size:22px;font-weight:800;color:var(--gold)">اختر شخصية لتبدأ الحوار</div><div id="qs" class="row" style="margin-top:12px"></div><div id="ans"></div></div></div>
+</section>
+
+<section class="s">
+<div class="k r">الماء</div>
+<h2 class="r">كم يومًا تكفي عشرة لترات؟</h2>
+<div class="map r">
+<div class="card"><p class="l">أسرة من ثلاثة أفراد كانت تستهلك 10 لترات من مياه الشرب والطبخ المعبأة في اليوم. بعد الحصار صارت الكمية نفسها تدوم نحو أربعة أيام. حرّك المؤشر.</p>
+<input type="range" id="rs" min="1" max="4" value="1" style="margin-top:24px"><div class="row" style="justify-content:space-between"><span>يوم</span><span>4 أيام</span></div></div>
+<div class="card"><div class="n" id="rl">3.3</div><div>لتر لكل فرد يوميًا (حساب تقريبي)</div>
+<svg viewBox="0 0 300 60" style="width:100%;margin-top:16px"><rect width="300" height="22" rx="11" fill="#223639"/><rect id="bar" width="300" height="22" rx="11" fill="#4FD1B5" style="transition:width .3s"/></svg>
+<p class="src" style="margin-top:12px">ارتفع سعر المياه المعبأة حتى 75% خلال أسابيع وفق تقرير AP/NPR</p></div>
+</div>
+</section>
+
+<section class="s">
+<div class="k r">التوصيات</div>
+<h2 class="r">ماذا نطلب؟</h2>
+<div class="rec r">
+<div class="card"><b>1</b>ممرات إنسانية آمنة للمرضى والإمدادات والوقود</div>
+<div class="card"><b>2</b>وقود دائم للمستشفيات ومضخات المياه</div>
+<div class="card"><b>3</b>ترصّد وبائي وتطعيم ومياه شرب آمنة</div>
+<div class="card"><b>4</b>تغذية علاجية للأطفال والحوامل</div>
+</div>
+<h2 class="r" style="color:var(--gold)">شكراً لكم</h2>
+<div class="nm" style="color:var(--mut)">زين العابدين · حمود · محمد غسان · عمار · عبدالله</div>
+</section>
+
+<script>
+const $=s=>document.querySelector(s);
+const sec=(k,h,p,src)=>`<section class="s"><div class="k r">${k}</div><h2 class="r">${h}</h2><div class="tabs r"><div class="row" id="${p}b" style="flex-direction:column;align-items:stretch"></div><div class="card"><div id="${p}t" style="font-size:clamp(28px,3.6vw,48px);font-weight:900;color:var(--mint)"></div><p class="l" id="${p}x" style="margin-top:10px"></p><div class="src" id="${p}s" style="margin-top:12px"></div></div></div><div class="src r">${src}</div></section>`;
+const HI=[["1229","عاصمة الرسوليين","كانت تعز عاصمة الدولة الرسولية (1229–1454) في عصرها الذهبي، وزارها ابن بطوطة في القرن 14.","Wikipedia، Al Jazeera"],
+["1516","العثمانيون","دخلت الحكم العثماني عام 1516، وعادت عاصمة بديلة في الحكم العثماني الثاني (1872–1918).","Wikipedia، مركز صنعاء"],
+["1948","مقر الإمام أحمد","اتخذها الإمام أحمد مقراً للحكم بعد إحباط انقلاب 1948 وحتى قيام الجمهورية عام 1962.","مركز صنعاء"],
+["1992","احتجاجات المعيشة","بعد الوحدة اندلعت فيها احتجاجات على تدهور المعيشة، وانتشرت إلى محافظات أخرى.","مركز صنعاء"],
+["2011","عاصمة الثورة","انطلقت منها احتجاجات أسقطت الرئيس صالح، وكان ميدان الحرية في وسطها رمزها.","Al Jazeera، MERIP"],
+["2015","بداية الحصار","اجتاح الحوثيون المحافظة مطلع 2015، وانقسمت المدينة بين الحوثيين والقوات المناهضة لهم. والمحافظة اليوم موزعة بين قوى ومليشيات متنافسة.","Wikipedia، مركز صنعاء"],
+["2024","تخفيف جزئي","في 13 يونيو 2024 فُتح طريق رئيسي إلى المدينة وخُفّف الحصار جزئياً.","Wikipedia"],
+["2026","تطويق كامل","في أكتوبر 2026 تشدد الحصار وأُغلق آخر شريان رئيسي، بحسب HRW.","HRW"]];
+const EC=[["الزراعة","اقتصاد المحافظة قائم على الزراعة وتربية الحيوان. من محاصيلها البن والحبوب والموز والمانجو والرمان والحمضيات والبصل والقات، وبن موكا من أشهر منتجاتها تاريخياً.","Wikipedia، YemenLG"],
+["القات والبن","يتجه مزارعون للقات لأن ربحه أعلى من البن، وفي المقابل تظهر مبادرات في تعز لاستبداله بالبن، أبرزها تعاونية بني سنان في المواسط.","Goethe-Institut، دراسة بني مطر"],
+["التجارة والصناعة","كانت تعز عقدة تجارية بين ساحل البحر الأحمر والمرتفعات، وفيها أسواق وحرف يدوية وصناعات صغيرة. تراجعت قيود السجل التجاري إلى 877 عام 2022 مقابل 1,002 عام 2014.","CIPE، مكتب الصناعة والتجارة"],
+["المهن","يعمل كثيرون في الزراعة وتربية الحيوان، وفي صيد الأسماك على ساحل البحر الأحمر. وفي المدينة قطاعات تعليم وإدارة وتجارة، وجامعة تعز من أبرز جامعات اليمن.","YemenLG، MEE"],
+["أثر الحرب","دُمّر الاقتصاد بالقتال والحصار وتآكلت الإيرادات المحلية. وعمل نازحون ومهنيون سابقون في الزراعة أو البناء بعد فقدان مهنهم.","YemenLG، The National"]];
+const SO=[["الأسرة","يتراوح متوسط حجم الأسرة بين 7 و10 أفراد في مناطق قُيّمت في تعز (2011). وكانت 13% من الأسر بإعالة نساء و4% بإعالة قاصرين.","Humanitarian Forum Yemen"],
+["التعليم والثقافة","تُعرف تعز بعاصمة الثقافة اليمنية، ويرى كثير من أهلها التعليم صمام أمان في وجه الحرب. لكن أطفالاً كثيرين خرجوا من المدارس بسبب النزوح والتكاليف.","مجلة المدنية"],
+["العادات والسلوكيات","جلسات القات عادة اجتماعية شائعة. وتغيّر وضع الأسرة والمرأة بعد 1962 مع التوسع في التعليم. وفي الحصار اعتاد الناس تخزين المياه والمواد الأساسية.","دراسة المدينة القديمة، Al Jazeera"],
+["النزوح والفئات الهشة","نزح نحو نصف مليون إنسان بحسب تقرير لمنظمة الصحة العالمية. والمهمّشون أكثر الفئات فقراً ونزوحاً، وواجهت نساء نازحات فجوة اجتماعية بين الحضر والريف.","WHO، مركز صنعاء، MEE"]];
+const hsx=document.querySelectorAll(".s")[3];
+hsx.insertAdjacentHTML("beforebegin",sec("٢ · الخلفية التاريخية والسياسية","عاصمة الثقافة والثورة","h","المصادر: Wikipedia، مركز صنعاء، Al Jazeera، HRW")+sec("٣ · الملف الاقتصادي","اقتصاد بين البن والقات والحصار","e","المصادر: الجهات المذكورة في كل تبويب")+sec("٤ · الملف الاجتماعي","أسرة كبيرة ومجتمع يقدّر التعليم","c","بعض الأرقام الاجتماعية من تقييمات قديمة، وتُحدَّث ببيانات دراستكم الميدانية"));
+function bind(p,D){const b=$("#"+p+"b");D.forEach((r,i)=>{const n=r.length==3,ti=n?r[0]:r[1],tx=n?r[1]:r[2],sr=n?r[2]:r[3];const x=document.createElement("button");x.className="b"+(i?"":" on");x.textContent=r[0];const f=()=>{[...b.children].forEach(y=>y.classList.toggle("on",y===x));$("#"+p+"t").textContent=ti;$("#"+p+"x").textContent=tx;$("#"+p+"s").textContent="المصدر: "+sr};x.onclick=f;b.append(x);if(!i)f()})}
+bind("h",HI);bind("e",EC);bind("c",SO);
+const HS=[
+[400,250,"مدينة تعز","نحو 38 كم² فقط، وتقديرات سكانها نحو 940 ألف نسمة (2023)، وهي ثالث أكبر مدن اليمن. ترتفع نحو 1,400 م عن سطح البحر، وتقع المحافظة نحو 256 كم جنوب صنعاء."],
+[430,380,"جبل صبر","يعلو أكثر من 3,000 م فوق المدينة. تضاريس المدينة الجبلية تصعّب توزيع المياه والنقل."],
+[610,410,"طريق هيجة العبد","الطريق الجبلي الرئيسي بين تعز وعدن. تقول HRW إن آخر شريان رئيسي أُغلق وتعرّض للهجوم منذ أكتوبر 2026."],
+[350,225,"المنشآت الصحية","42 منشأة في المدينة تعاني نقصاً حاداً في الوقود والأكسجين والأدوية، بحسب منظمة الصحة العالمية."],
+[455,235,"شبكة المياه","دراسة جغرافية سابقة قدّرت تغطية الشبكة بنحو 52% من السكان فقط. اليوم تقلّ الإمدادات مع منع الصهاريج ونقص الوقود."]];
+const g=$("#hsg");
+HS.forEach((h,i)=>{g.insertAdjacentHTML("beforeend",`<circle class="hp" cx="${h[0]}" cy="${h[1]}" r="8"/><circle class="hs" data-i="${i}" cx="${h[0]}" cy="${h[1]}" r="9"/>`)});
+g.onclick=e=>{const i=e.target.dataset.i;if(i==null)return;$("#pt").textContent=HS[i][2];$("#pb").textContent=HS[i][3]};
+document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{
+document.querySelectorAll("[data-m]").forEach(x=>x.classList.toggle("on",x===b));
+const m=b.dataset.m=="2";const r=$("#rg");r.setAttribute("stroke-dasharray",m?"none":"26 22");r.setAttribute("stroke-width",m?7:4);
+$("#xx").setAttribute("opacity",m?1:0);$("#ra").setAttribute("stroke",m?"#F0524F":"#4FD1B5")});
+const T=[["الأكسجين","نقصه يهدد الجراحات الطارئة والعناية المركزة وغسيل الكلى ورعاية حديثي الولادة (HRW)."],
+["الوقود","يهدد إنتاج الأكسجين وسيارات الإسعاف وسلسلة تبريد اللقاحات، وتحذّر WHO من أن النظام الصحي في خطر حرج."],
+["الأدوية","معظم الإمدادات الصحية تأتي من عدن، والنقل صار أصعب وأغلى بسبب إغلاق الطرق والاشتباكات."],
+["الكوادر","ضغط هائل على فرق علاج الإصابات، بحسب منسق الصحة في اللجنة الدولية للصليب الأحمر."],
+["التغذية والأمراض","وصفت WHO سوء التغذية بالمقلق للغاية، وأبلغت الأمم المتحدة عن حالات يُشتبه بإصابتها بالدفتيريا والضنك."]];
+const tb=$("#tb");T.forEach((t,i)=>{const b=document.createElement("button");b.className="b"+(i?"":" on");b.textContent=t[0];b.onclick=()=>{[...tb.children].forEach(x=>x.classList.toggle("on",x===b));sh(i)};tb.append(b)});
+function sh(i){$("#tt").textContent=T[i][0];$("#tx").textContent=T[i][1]}sh(0);
+$("#rs").oninput=e=>{const d=+e.target.value;$("#rl").textContent=(10/3/d).toFixed(1);$("#bar").setAttribute("width",300/d)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add("in");
+e.target.querySelectorAll("[data-n]").forEach(c=>{const n=+c.dataset.n,s=c.dataset.s||"",t0=performance.now();
+(function f(t){const p=Math.min(1,(t-t0)/1400);c.textContent=Math.round(n*(1-Math.pow(1-p,3))).toLocaleString("en")+s;if(p<1)requestAnimationFrame(f)})(t0)});
+io.unobserve(e.target)}),{threshold:.25});
+document.querySelectorAll(".r").forEach(x=>io.observe(x));
+const S=[...document.querySelectorAll(".s")],d=$("#dots");
+S.forEach((s,i)=>{s.id=s.id||"p"+i;d.insertAdjacentHTML("beforeend",`<a href="#${s.id}"></a>`)});
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){[...d.children].forEach((a,i)=>a.classList.toggle("on",S[i]===e.target))}}),{threshold:.5});
+S.forEach(s=>io2.observe(s));
+const LB=["الغلاف","١ الجغرافيا","الأرقام","٢ التاريخ","٣ الاقتصاد","٤ المجتمع","٥ الصحة","أصوات السكان","الماء","التوصيات"];let cur=0;
+const nv=$("#nv");S.forEach((s,i)=>nv.insertAdjacentHTML("beforeend",`<a href="#${s.id}">${LB[i]||i+1}</a>`));
+const io3=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){cur=S.indexOf(e.target);[...nv.children].forEach((a,i)=>a.classList.toggle("on",i==cur));nv.children[cur].scrollIntoView({inline:"center",block:"nearest"})}}),{threshold:.5});
+S.forEach(s=>io3.observe(s));
+const go=i=>S[Math.max(0,Math.min(S.length-1,i))].scrollIntoView({behavior:"smooth"});
+addEventListener("keydown",e=>{if(e.target.tagName=="INPUT")return;const k=e.key;
+if(["ArrowDown","PageDown"," ","ArrowLeft"].includes(k)){e.preventDefault();go(cur+1)}
+else if(["ArrowUp","PageUp","ArrowRight"].includes(k)){e.preventDefault();go(cur-1)}
+else if(k=="Home")go(0);else if(k=="End")go(S.length-1)});
+addEventListener("scroll",()=>{const m=document.documentElement.scrollHeight-innerHeight;$("#pg").style.width=(m>0?scrollY/m*100:0)+"%"},{passive:true});
+$("#pm").onclick=e=>{const o=document.documentElement.classList.toggle("pm");e.target.classList.toggle("on",o);e.target.textContent=o?"إيقاف وضع العرض":"وضع العرض"};
+const P=[
+["أم لطفلين","تستند إلى شهادة AP/NPR",[
+["كيف تغيّرت مياه الشرب؟","كنا نستهلك نحو 10 لترات يوميًا للشرب والطبخ، والآن نمدّد الكمية نفسها لنحو أربعة أيام.","AP/NPR"],
+["وماذا عن الأسعار؟","سعر المياه المعبأة ارتفع حتى 75% خلال أسابيع، وبعض الأسر تشتري بالدين.","AP/NPR"],
+["كيف تطبخون؟","غاز الطهي لا يصل، وبعض الأسر لجأت إلى الحطب.","تقارير صحفية"],
+["ما أكثر ما تخافين منه؟","أن يمرض الأطفال. أُبلغ عن حالات يُشتبه بإصابتها بالدفتيريا والضنك، وسوء التغذية مقلق.","الأمم المتحدة، WHO"]]],
+["طبيب في مستشفى","تستند إلى HRW وWHO",[
+["ما أخطر نقص عندكم؟","الأكسجين. نقصه يهدد الجراحات الطارئة والعناية المركزة وغسيل الكلى ورعاية حديثي الولادة.","HRW"],
+["لماذا تأخرت الإمدادات؟","معظمها يأتي من عدن، وبسبب إغلاق الطرق والاشتباكات صار نقلها أصعب وأغلى.","HRW"],
+["وما أثر نقص الوقود؟","يهدد إنتاج الأكسجين وسيارات الإسعاف وحفظ اللقاحات مبردة.","WHO"],
+["ماذا تطلبون؟","سلامة حركة المرضى والكوادر والإسعاف، ودخول الوقود والأكسجين والأدوية.","WHO"]]],
+["سائق صهريج مياه","تستند إلى HRW وAP",[
+["ماذا يحدث في الطريق؟","أُوقف سائقو الصهاريج عند نقاط التفتيش أثناء محاولتهم إدخال المياه إلى المدينة.","HRW"],
+["لماذا قلّت المياه؟","الوصول إلى الآبار محدود، ومحطات التحلية تعاني من نقص الوقود، والصهاريج شبه ممنوعة من الدخول.","AP"],
+["من يتضرر أولًا؟","مضخات المياه والمستشفيات تحتاج الوقود نفسه، فنقصه يضرب الاثنين معًا.","AFP"]]],
+["رجل عاش الحصار سابقًا","تستند إلى Al Jazeera وAP",[
+["كيف تقارن الآن بالماضي؟","الحصار قائم منذ 2015، لكن الأسوأ جاء في أكتوبر 2026 بتطويق كامل وإغلاق آخر شريان رئيسي.","HRW"],
+["ماذا فعل الناس؟","خزّن كثيرون المياه والمواد الأساسية خوفًا من النقص، وغادرت أسر المدينة.","Al Jazeera، AP"],
+["من تخشى عليهم؟","المرضى والأطفال والنساء وكبار السن، لصعوبة الوصول إلى المستشفيات والأدوية.","Al Jazeera"]]]];
+const pp=$("#pp"),qs=$("#qs"),an=$("#ans");
+P.forEach((p,i)=>{const b=document.createElement("button");b.className="pc";b.innerHTML=`${p[0]}<small>${p[1]}</small>`;b.onclick=()=>{[...pp.children].forEach(x=>x.classList.toggle("on",x===b));$("#who").textContent=p[0];an.innerHTML="";qs.innerHTML="";
+p[2].forEach(q=>{const c=document.createElement("button");c.className="b";c.textContent=q[0];c.onclick=()=>{an.insertAdjacentHTML("beforeend",`<div class="bq">${q[0]}</div>`);c.disabled=true;c.style.opacity=.4;setTimeout(()=>{an.insertAdjacentHTML("beforeend",`<div class="ba">${q[1]}<small>المصدر: ${q[2]}</small></div>`)},350)};qs.append(c)})};pp.append(b)});
+</script>
+</body>
+</html>
